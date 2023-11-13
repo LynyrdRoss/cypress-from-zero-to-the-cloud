@@ -6,7 +6,7 @@
   "scripts": {
     "cy:run:key": "npx cypress run --record --key 2cac3313-56f8-4735-bbbb-36c96d9270fa",
     "cy:open": "cypress open --e2e -b chrome",
-    "start": "my-server -p 3030",
+    "start": "node ./scripts/start.js",
     "test": "cypress run"
   },
   "repository": {
