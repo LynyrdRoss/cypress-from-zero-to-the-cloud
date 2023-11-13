@@ -119,7 +119,7 @@ describe('TAT Customer Service Center', () => {
       .should('be.empty')
   })
 
-  it('', () => {
+  it('displays an error message when submitting the form without filling the required fields', () => {
     cy.get('.button').should('be.visible').click()
     cy.get('.error')
       .should('be.visible')
