@@ -127,4 +127,8 @@ describe('TAT Customer Service Center', () => {
         expect(res[0].innerText).to.contain('Validate the required fields')
       })
   })
+
+  it.only('successfully submits the form using a custom command', () => {
+    cy.gui_fillMandatoryFieldsAndSubmit()
+  })
 })
