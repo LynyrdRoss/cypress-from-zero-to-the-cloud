@@ -8,20 +8,19 @@ describe('TAT Customer Service Center', () => {
   })
 
   it('fills in the required fields and submits the form', () => {
+    const longText = Cypress._.repeat('Lorem ipsum dolor sit amet', 10)
+
     cy.get('#firstName').click().clear().type('LA', { delay: 30 })
     cy.get('#lastName').click().clear().type('Alquiroz', { delay: 30 })
     cy.get('#email')
       .click()
       .clear()
       .type('rossalquiroz@gmail.com', { delay: 30 })
-    cy.get('#open-text-area')
-      .click()
-      .clear()
-      .type('Sample text area automatic typing, Lorem Ipsum Lorem Ipsum', {
-        delay: 30,
-      })
+    cy.get('#open-text-area').click().clear().type(longText, {
+      delay: 30,
+    })
 
-    cy.get('.button').should('be.visible').click()
+    cy.contains('button', 'Send').should('be.visible').click()
     cy.get('.success')
       .should('be.visible')
       .then((res) => {
@@ -43,7 +42,7 @@ describe('TAT Customer Service Center', () => {
         delay: 30,
       })
 
-    cy.get('.button').should('be.visible').click()
+    cy.contains('button', 'Send').should('be.visible').click()
     cy.get('.error')
       .should('be.visible')
       .then((res) => {
@@ -80,7 +79,7 @@ describe('TAT Customer Service Center', () => {
         cy.get('#phone').should('have.attr', 'required')
       })
 
-    cy.get('.button').should('be.visible').click()
+    cy.contains('button', 'Send').should('be.visible').click()
     cy.get('.error')
       .should('be.visible')
       .then((res) => {
@@ -120,7 +119,7 @@ describe('TAT Customer Service Center', () => {
   })
 
   it('displays an error message when submitting the form without filling the required fields', () => {
-    cy.get('.button').should('be.visible').click()
+    cy.contains('button', 'Send').should('be.visible').click()
     cy.get('.error')
       .should('be.visible')
       .then((res) => {
@@ -128,7 +127,7 @@ describe('TAT Customer Service Center', () => {
       })
   })
 
-  it.only('successfully submits the form using a custom command', () => {
+  it('successfully submits the form using a custom command', () => {
     cy.gui_fillMandatoryFieldsAndSubmit()
   })
 })
