@@ -8,8 +8,13 @@ describe('TAT Customer Service Center', () => {
     cy.get('@selectYoutube').should('have.value', 'youtube')
   })
 
-  it.only('selects a product (Mentorship) by its value', () => {
+  it('selects a product (Mentorship) by its value', () => {
     cy.get('select').as('selectYoutube').select('Mentorship')
     cy.get('@selectYoutube').should('have.value', 'mentorship')
+  })
+
+  it('selects a product (Blog) by its index', () => {
+    cy.get('select').as('selectYoutube').select('Blog')
+    cy.get('@selectYoutube').should('have.value', 'blog')
   })
 })
