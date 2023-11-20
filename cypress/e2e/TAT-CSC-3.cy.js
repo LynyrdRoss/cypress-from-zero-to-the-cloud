@@ -4,17 +4,14 @@ describe('TAT Customer Service Center', () => {
   })
 
   it('selects a product (YouTube) by its content', () => {
-    cy.get('select').as('selectYoutube').select('YouTube')
-    cy.get('@selectYoutube').should('have.value', 'youtube')
+    cy.get('#product').select('YouTube').should('have.value', 'youtube')
   })
 
   it('selects a product (Mentorship) by its value', () => {
-    cy.get('select').as('selectYoutube').select('Mentorship')
-    cy.get('@selectYoutube').should('have.value', 'mentorship')
+    cy.get('#product').select('Mentorship').should('have.value', 'mentorship')
   })
 
   it('selects a product (Blog) by its index', () => {
-    cy.get('select').as('selectYoutube').select('Blog')
-    cy.get('@selectYoutube').should('have.value', 'blog')
+    cy.get('#product').select('Blog').should('have.value', 'blog')
   })
 })
