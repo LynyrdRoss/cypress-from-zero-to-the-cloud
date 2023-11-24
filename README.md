@@ -1,4 +1,4 @@
-# Cypress, from Zero to the Cloud
+# 🌲 Cypress, from Zero to the Cloud
 
 Cypress scripts that I created from each of the lessons in the course
 
