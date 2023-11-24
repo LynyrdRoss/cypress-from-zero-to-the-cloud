@@ -6,6 +6,9 @@
   "scripts": {
     "cy:run:key": "npx cypress run --record --key 2cac3313-56f8-4735-bbbb-36c96d9270fa",
     "cy:open": "cypress open --e2e -b chrome",
+    "cy:run": "cypress run --e2e -b chrome",
+    "cy:open:mobile": "cypress open --e2e -b chrome --config viewportWidth=410 viewportHeight=860",
+    "cy:run:mobile": "cypress run --e2e -b chrome --config viewportWidth=410 viewportHeight=860",
     "test": "cypress run"
   },
   "repository": {
