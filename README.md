@@ -1,28 +1,25 @@
-# 🌲 Cypress, from Zero to the Cloud ☁️
+# Cypress, from Zero to the Cloud
 
-👋 Welcome!
+Cypress scripts that I created from each of the lessons in the course
 
-It's great to have you here. I'm sure you will love this course. ❤️
+## Pre-requirements
 
-## What you will learn from the course
+It is required to have git, Node.js and npm installed to clone and run this project.
 
-- How to set up a Cypress project from scratch
-- How to visit local and remote pages
-- How to deal with elements most commonly found in web applications
-- How to test file uploading
-- How to perform various assertions of expected results
-- How to create custom commands
-- How to deal with links that open in another browser tab
-- How to run tests simulating a mobile device
-- How to solve the same problems in different ways, using the [Cypress API](https://docs.cypress.io/api/table-of-contents)
-- How to create effective documentation for your automated testing project
-- How to run tests in a continuous integration (CI) workflow
-- How to integrate your CI workflow with the Cypress Cloud
+> Node version is v16.14.2 at the time of writing these scripts
 
-## Let's start
+## Installation
 
-Go to the [course structure](./lessons/_course-structure_.md) section.
+Run `npm install` (or `npm i` for the short version) to install the dev dependencies.
 
-___
+## Tests
 
-This is a course from [**Talking About Testing School**](https://udemy.com/user/walmyr).
+run `npm run cy:open` to open the Cypress App and run the tests in interactive mode.
+
+Or `npm run cy:run` to run the Cypress tests in headless mode.
+
+If you want to simulate in mobile version, you may do so with `cy:open:mobile`
+
+## This was a GREAT experience!
+
+Special thanks to [Walmyr](https://walmyr.dev).
