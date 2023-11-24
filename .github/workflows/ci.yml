@@ -11,4 +11,4 @@ jobs:
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
         with:
-          command: cy:run:key
+          command: npm run test:cloud
