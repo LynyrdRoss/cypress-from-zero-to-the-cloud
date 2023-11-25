@@ -8,7 +8,7 @@ describe('TAT Customer Service Center', () => {
   })
 
   it('fills in the required fields and submits the form', () => {
-    const longText = Cypress._.repeat('Lorem ipsum dolor sit amet', 10)
+    const longText = Cypress._.repeat('Lorem ipsum dolor sit amet', 5)
 
     cy.get('#firstName').click().clear().type('LA', { delay: 30 })
     cy.get('#lastName').click().clear().type('Alquiroz', { delay: 30 })
